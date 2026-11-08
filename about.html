@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Website - About</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+ <div id="container">
+
+    <nav class="default">
+        <ul>
+            <li class="flex-container"><a class="nav" href="index.html">Home</a></li>
+            <li class="flex-container"><a class="nav" href="shop.html">Shop</a></li>
+            <li class="flex-container"><a class="nav" id="page-active" href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="description">
+        <h1 class="larger_h1">About the developer</h1>
+    </div>       
+    
+    <div class="description">
+    <p>I'm Emir Abliakimov<br> 
+    2nd year Creative Computing Student<br>
+    <i>SETU Waterford</i><br>
+    </p>
+    </div>
+
+    <div class="description">
+    <p>Questions about the website or issues with functionality?<br>
+    Please email: <a href="mailto:20117879@setu.ie"><u>20117879@setu.ie</u></a><br>
+    Briefly describe the problem and attach screenshots of the page and the console.
+    </p>
+    </div>
+    <div class="description">
+        <h2 class="larger_h2"><br>Did you know that you can add your own item to the list?</h1>
+    </div>
+    <div class="description">
+        <p>Use the panel below to enter product details<br>
+        We will review your product(s) and contact you within 3 business days.
+</p>
+    </div>
+
+    
+    <div >
+        <form class="add_user_item">
+      <div class="form-row">
+        <label for="product_name">Product name:</label>
+        <input type="text" name="product_name" id="product_name" required="" title="Please enter product name">
+      </div>
+
+      <div class="form-row">
+        <label for="season_options">Season</label>
+        <select name="season_select" id="season_select">
+                <option value = "summer" selected="">Summer</option>
+                <option value = "winter">Winter</option>
+        </select>
+    </div>
+
+      <div class="form-row">
+        <label for="colour">Colour</label>
+        <select name="item_colour" id="item_colour">
+                <option value = "white" selected="">White ⚪</option>
+                <option value = "black">Black ⚫</option>
+                <option value = "brown">Brown 🟤</option>
+                <option value = "red">Red 🔴</option>
+                <option value = "green">Green 🟢</option>
+                <option value = "yellow">Yellow 🟡</option>
+                <option value = "blue">Blue 🔵</option>
+                <option value = "orange">Orange 🟠</option>
+                <option value = "purple">Purple 🟣</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="item_price">Price &#8364</label>
+        <input type="number" name="item_price" min="1" max="999" id="item_price" required="" title="Please enter price in euro">
+      </div>
+
+      <div class="form-row">
+        <label for="item_discount">Discount %</label>
+        <input type="number" name="item_discount" id="item_discount" max="99" title="Leave this field blank if no discount" placeholder="%" value="0">
+      </div>
+
+      <div class="form-row">
+	    <label for="file">Choose image to upload</label>
+        <input type="file" id="file" name="file" required="" onerror="image_error()">
+     </div>
+
+      <button type="submit" id="add_item">
+        Add a New Item
+      </button>
+      <button type="reset" id="reset_items">
+        Cancel
+      </button>
+    </form>
+    </div>
+
+
+    <div class="description"><p>Expected design</p>
+    </div>
+     <div class="cards">
+    <script src="js/about_code.js"></script>
+    </div>
+    <div class="submit_items">
+    <button type="submit" id="submit_items_button" onclick="submitItems()">
+        Submit your Items
+    </button>
+    </div>
+</body>
+</html>

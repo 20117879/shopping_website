@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Website - Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+ <div id="container">
+
+    <nav class="default">
+        <ul>
+            <li class="flex-item"><a class="nav" href="index.html">Home</a></li>
+            <li class="flex-item"><a class="nav" id="page-active" href="shop.html">Shop</a></li>
+            <li class="flex-item"><a class="nav" href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="search_bar" class="default">
+
+
+        <form>
+
+        <div class="input_field">
+            <input type="text" name="search" id="search" placeholder= "To use filters across all items, leave this field empty and press Search" maxlength="50">
+        </div>
+
+        <div class="max_price">
+            <select id="price_limit" name="price_limit">
+                <option value = "">No price limit</option>
+                <option value = "10_euro">Less than &#8364 10</option>
+                <option value = "20_euro">Less than &#8364 20</option>
+                <option value = "30_euro">Less than &#8364 30</option>
+                <option value = "50_euro">Less than &#8364 50</option>
+                <option value = "70_euro">Less than &#8364 70</option>
+                <option value = "100_euro">Less than &#8364 100</option>
+            </select>
+        </div>
+
+        <div class="search_all_checkbox">
+            <input type="checkbox" id="search_all" name="search_all">
+            <label for="search_all">Display all items</label>
+        </input>
+        </div>
+        
+        <div class="colour_dropdown">
+            <select id="colour_options" name="colour_options">
+                <option value = "">All colours</option>
+                <option value = "white">White ⚪</option>
+                <option value = "black">Black ⚫</option>
+                <option value = "brown">Brown 🟤</option>
+                <option value = "red">Red 🔴</option>
+                <option value = "green">Green 🟢</option>
+                <option value = "yellow">Yellow 🟡</option>
+                <option value = "blue">Blue 🔵</option>
+                <option value = "orange">Orange 🟠</option>
+                <option value = "purple">Purple 🟣</option>
+            </select>
+        </div>
+
+
+            <input type="button" class="summer" id="summer_button" onclick="" value="Summer 🌡">
+        
+            <input type="button" class="winter" id="winter_button" onclick="" value="Winter ❄">
+    
+            
+            <input type="submit" id="search_button" value="Search">
+            
+            <input type="reset" id="cancel_button" value="Cancel" onclick="cancel_input()">
+   
+
+            </form>
+      </div>
+
+ <div class="cards">
+<script src="js/shop_code.js"></script>
+
+ </div>
+
+    <div class="no_result">
+    </div>      
+    
+    
+    <div id="cart_box" style="display: none">
+        <div id="cart_number"><span id="cart_text">Cart Number: <script>randomize()</script></span></div>
+        <input type="button" id="remove_item" value="Remove item" onclick="count_down()">
+        <input type="button" id="reset_cart" value="Reset cart" onclick="reset_cart()">
+    </div>          
+    <div class="cart_icon" onclick="toggle_cart()">
+        <div><img src="images/icons/shopping_bag_white.png" alt="shopping bag" ></div>  
+        <div id="item_counter"><span id ="counter_text">0</span></div>
+    </div>    
+
+ </div>
+
+
+</body>
+
+</html>
+
